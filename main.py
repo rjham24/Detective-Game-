@@ -5,15 +5,17 @@ def main():
     print("\nLet's explore the case first, shall we?")
     ready = input("Type 'yes' to proceed or 'no' to exit: ")
 
-    if ready in ("yes", "Yes", "YES"):
+    while ready.lower() not in ['yes', 'no']:
+        print("Invalid input. Please type 'yes' or 'no'.")
+        ready = input("Type 'yes' to proceed or 'no' to exit: ")
+
+    if ready.lower() == 'yes':
         instruction()
-        input("\n(Press Enter to begin your investigation...)")
         start_game()
     else:
-        print("\n🛑 Mission Aborted. The truth sinks with the tide...")
-
-
-
+        print("\n🕵️‍♀️ You step away... for now. The case remains unsolved.")
+        exit()
+        
 def intro():
     global detective_name
     print("\n🚢 WELCOME ABOARD , THE OCEAN PEARL")

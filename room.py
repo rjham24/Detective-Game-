@@ -13,8 +13,7 @@ def upper_deck(detective_name):
         print("2. Talk to the crew")
         print("3. Look around the deck for clues")
         print("4. Check your case notes")
-        print("5. View suspect list")
-        print("6. Leave the scene")
+        print("5. Leave the scene")
 
         choice = input("\nChoose your action: ")
 
@@ -38,14 +37,6 @@ def upper_deck(detective_name):
             show_clues()    
 
         elif choice == "5":
-            from tracker import all_areas_visited
-            if all_areas_visited():
-                from suspects import show_suspects
-                show_suspects()
-            else:
-                print("🛑 You must explore all areas before viewing the suspect list.")
-
-        elif choice == "6":
             print("\n🚪 You leave the scene, but the mystery remains unsolved.")
             break
 
@@ -65,8 +56,7 @@ def dining_hall(detective_name):
         print("1. Interrogate the suspects")
         print("2. Search for clues")
         print("3. Check your case notes")
-        print("4. View suspect list")
-        print("5. Leave the dining hall")
+        print("4. Leave the dining hall")
 
 
         choice = input("\nChoose your action: ")
@@ -82,17 +72,9 @@ def dining_hall(detective_name):
             add_clue("Clue: Crumpled receipt for a 12:05 AM drink found under Ms. Green’s table")
 
         elif choice == "3":
-            show_clues()  
+            show_clues()      
 
         elif choice == "4":
-            from tracker import all_areas_visited
-            if all_areas_visited():
-                from suspects import show_suspects
-                show_suspects()
-            else:
-                print("🛑 You must explore all areas before viewing the suspect list.")      
-
-        elif choice == "5":
             print("\n🚪 You leave the dining hall, but the mystery deepens.")
             break
             
@@ -113,8 +95,7 @@ def dj_lounge(detective_name):
         print("2. Interrogate a suspect")
         print("3. Search for clues")
         print("4. Check your case notes")
-        print("5. View suspect list")
-        print("6. Leave the DJ lounge")
+        print("5. Leave the DJ lounge")
 
         choice = input("\nChoose your action: ")
 
@@ -137,14 +118,6 @@ def dj_lounge(detective_name):
             show_clues()  
 
         elif choice == "5":
-            from tracker import all_areas_visited
-            if all_areas_visited():
-                from suspects import show_suspects
-                show_suspects()
-            else:
-                print("🛑 You must explore all areas before viewing the suspect list.")      
-
-        elif choice == "6":
             print("\n🚪 You leave the DJ lounge, but the mystery remains unsolved.")
             break
 
@@ -164,8 +137,7 @@ def cabins(detective_name):
         print("1. Knock on a cabin door 204 ")
         print("2. Search for clues in the hallway")
         print("3. Check your case notes")
-        print("4. View suspect list")
-        print("5. Leave the cabins")
+        print("4. Leave the cabins")
 
         choice = input("\nChoose your action: ")
 
@@ -181,17 +153,9 @@ def cabins(detective_name):
             add_clue("Clue: Torn dark fabric caught on Mr. Blue’s cabin (206) door handle")
 
         elif choice == "3":
-            show_clues()   
+            show_clues()       
 
         elif choice == "4":
-            from tracker import all_areas_visited
-            if all_areas_visited():
-                from suspects import show_suspects
-                show_suspects()
-            else:
-                print("🛑 You must explore all areas before viewing the suspect list.")     
-
-        elif choice == "5":
             print("\n🚪 You leave the cabins, but the mystery remains unsolved.")
             break
 
@@ -203,7 +167,7 @@ def kitchen(detective_name):
     from tracker import mark_area_visited
     mark_area_visited("Kitchen")
     print("\n👩‍🍳 Kitchen – A Recipe for Secrets")
-    print("The kitchen smells of spices and tension, Detective {detective_name}.")
+    print("The kitchen smells of spices and tension, Detective " , detective_name , ".")
     print("Chefs rush about, but something feels off.")
 
     while True:
@@ -212,8 +176,7 @@ def kitchen(detective_name):
         print("2. Check the knife inventory")
         print("3. Look around for clues")
         print("4. Check your case notes")
-        print("5. View suspect list")
-        print("6. Leave the kitchen")
+        print("5. Leave the kitchen")
 
         choice = input("\nChoose your action: ")
 
@@ -236,14 +199,6 @@ def kitchen(detective_name):
             show_clues()
 
         elif choice == "5":
-            from tracker import all_areas_visited
-            if all_areas_visited():
-                from suspects import show_suspects
-                show_suspects()
-            else:
-                print("🛑 You must explore all areas before viewing the suspect list.")
-
-        elif choice == "6":
             print("\n🚪 You leave the kitchen. The heat still lingers.")
             break
 
@@ -264,8 +219,7 @@ def engine_room(detective_name):
         print("2. Search the control panel")
         print("3. Look around for strange marks")
         print("4. Check your case notes")
-        print("5. View suspect list")
-        print("6. Leave the engine room")
+        print("5. Leave the engine room")
 
         choice = input("\nChoose your action: ")
 
@@ -286,14 +240,6 @@ def engine_room(detective_name):
             show_clues()
 
         elif choice == "5":
-            from tracker import all_areas_visited
-            if all_areas_visited():
-                from suspects import show_suspects
-                show_suspects()
-            else:
-                print("🛑 You must explore all areas before viewing the suspect list.")
-
-        elif choice == "6":
             print("\n🚪 You exit the engine room. The mystery deepens.")
             break
 
